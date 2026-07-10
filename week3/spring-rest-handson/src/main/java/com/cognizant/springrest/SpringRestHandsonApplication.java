@@ -1,0 +1,17 @@
+package com.cognizant.springrest;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import com.cognizant.springrest.service.CountryService;
+
+@SpringBootApplication
+public class SpringRestHandsonApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringRestHandsonApplication.class, args);
+		CountryService countryService = context.getBean(CountryService.class);
+		System.out.println(countryService.getCountry());
+	}
+
+}
